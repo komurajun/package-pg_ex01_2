@@ -21,6 +21,7 @@ public class pg_ex01_2 {
 
 	}
 
+
 	public static void henkan(int i, String ans[]) {
 
 		// 変換内容
