@@ -2,27 +2,27 @@ package pg_ex01_2;
 
 public class pg_ex01_2 {
 
-	public static void main(String[] arg) {
+	public Object test(int value) {
 
-		String ans[] = new String[25];
+		String ans[] = new String[21];
 
-		for (int i = 0; i < ans.length; i++) {
+		for (int i = 0; i < ans.length;i++) {
 
 			if ((0 < i) && (i < 21)) {
 				// 変換処理呼び出し
 				henkan(i, ans);
-
-			} else {
-				// 1～20以外
-				System.out.println(i + "⇒" + "変換出来ません");
 			}
-
 		}
-
+		// 出力
+		if((0 < value) && (value < 21)){
+		return ans[value];
+		}else{
+		// 1～20以外
+		return "変換出来ません";
+		}
 	}
 
-
-	public static void henkan(int i, String ans[]) {
+	public static  void henkan(int i, String ans[]) {
 
 		// 変換内容
 		String roma1 = "I";
@@ -62,7 +62,5 @@ public class pg_ex01_2 {
 		if (10 < i) {
 			ans[i] = roma10 + ans[i - 10];
 		}
-		// 出力
-		System.out.println(i + "⇒" + ans[i]);
 	}
 }
